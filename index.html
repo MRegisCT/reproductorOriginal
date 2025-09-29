@@ -3,42 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Reproductor</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./styles.css">
     <script type="module" src="./main.js"></script>
 </head>
 <body>
-    <div class="container">
-        <div class="music-player">
-            <nav>
-                <div class="circle">
-                    <span>back</span>
+    <nav> 
+
+    </nav>
+    <main> 
+        <section> 
+            <div>
+                <p>Playlist</p>
+                <p>Daily Mix</p>
+            </div>
+            <div>
+                <div> <i class="fa-solid fa-backward-step"></i> </div>
+                <div> <img src="" alt=""></div>
+                <div><i class="fa-solid fa-forward-step"></i></div>
+            </div>
+            <div>
+                <div><i class="fa-solid fa-shuffle"></i></div>
+                <div><i class="fa-solid fa-play"></i></div>
+                <div><i class="fa-solid fa-repeat"></i></div>
+            </div>
+            <div>
+                <div><i class="fa-solid fa-heart"></i></div>
+                <p>Deja Vu</p>
+                <p>Olivia Rodrigo</p>
+                <div><i class="fa-solid fa-share"></i></div>
+            </div>
+        </section>
+        <section> 
+            <div>
+                
+                <div>
+                    <i class="fa-solid fa-plus"></i>
+                    <p>My Songs</p>
+                    <i class="fa-solid fa-xmark"></i>
                 </div>
-                <div class="circle">
-                    <span>bars</span>
+                <div>
+
                 </div>
-            </nav>
-
-            <div id="song-details">
-                <img src="./media/default_img.jpg" alt="" id="song-img">
-                <h1 id="title"></h1>
-                <h3 id="artist"></h3>
             </div>
-
-            <div class="audio">
-                <audio controls id="media" hidden>
-                    <!--<source id="audio" src="" type="audio/mpeg">-->
-                </audio>
-                <input type="range" value="0" id="progress">
-            </div>
-
-            <div class="song-controls">
-                <span id="lastest">last</span>
-                <span id="play" class="play">play</span>
-                <span id="forward">forward</span>
-            </div>
-
-        </div>
-    </div>
+            <div></div>
+        </section>
+    </main>
 </body>
 </html>
