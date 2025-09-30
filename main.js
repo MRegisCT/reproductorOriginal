@@ -1,7 +1,6 @@
 import createPlaylist from "./utils/playlist.js";
+import audioController from "./domain/audio_controller.js";
 
-let progress_bar = document.getElementById("progress");
-let media = document.getElementById("media");
 let play_btn = document.getElementById("play");
 const song_img = document.getElementById("song-img");
 const lastest = document.getElementById("lastest");
@@ -35,7 +34,7 @@ const playlist = createPlaylist(songs.length);
 let playingNow;
 
 window.addEventListener('DOMContentLoaded', () => {
-    playingNow = playlist.pop()
+    audioController.initializaPlayer
     loadSong(playingNow);
 })
 
@@ -51,18 +50,6 @@ function loadSong(i){
     song_img.src = now.caratula;
 }
 
-media.addEventListener('loadedmetadata', () => {
-    progress_bar.max = 100;
-    progress_bar.value = 0;
-    if(play_btn.classList.contains("pause")){
-        media.play();
-    }
-});
-
-media.ontimeupdate = function updateProgressBar() {
-    const progress_value = (this.currentTime / this.duration) * 100;
-    progress_bar.value = progress_value;
-}
 
 lastest.addEventListener('click', function(){
     if(!last.length == 0){
